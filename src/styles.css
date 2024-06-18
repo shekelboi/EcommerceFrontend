@@ -2,3 +2,50 @@
 /* @import"primeng/resources/themes/vela-green/theme.css"; */
 @import"primeng/resources/themes/saga-green/theme.css";
 @import"primeng/resources/primeng.css";
+
+body {
+    margin: 0px;
+}
+
+app-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 12.5vh;
+    background-color: grey;
+}
+
+app-site-id {
+    display: block;
+    height: 100%;
+}
+
+app-categories-dropdown {
+    display: block;
+}
+
+app-cart-button {
+    display: block;
+    height: 100%;
+}
+
+app-cart-button p-button {
+    display: block;
+    height: 100%;
+}
+
+app-cart-button button {
+    display: block;
+    height: 100%;
+}
+
+app-cart-button button img {
+    width: 80%;
+}
+
+* {
+    outline: 1px solid red;
+}

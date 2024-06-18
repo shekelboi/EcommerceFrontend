@@ -1,0 +1,19 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 5vh;
+    font-size: 2.5vh;
+}
+
+.search-bar input {
+    display: block;
+}
+
+.search-bar ::ng-deep .p-button {
+    height: 5vh;
+}
