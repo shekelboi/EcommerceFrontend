@@ -1,3 +1,5 @@
 img {
     height: 100%;
+    background-image: linear-gradient(to right, rgb(105, 230, 67) 0%, rgb(139, 255, 103) 25%, rgb(162, 211, 147) 75%, rgb(193, 216, 173) 100%);
+
 }
