@@ -7,9 +7,21 @@
     outline: 1px solid red;
 }
 
+html, body, app-root {
+    height: 100%;
+}
+
 body {
     margin: 0px;
 }
+
+/* App root */
+
+app-root {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Nav bar */
 
@@ -52,4 +64,19 @@ app-cart-button button {
 
 app-cart-button button img {
     width: 80%;
+}
+
+/* Footer */
+
+app-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+    margin-top: auto;
+    height: 7.5rem;
+    background-color: rgb(193, 216, 173);
 }

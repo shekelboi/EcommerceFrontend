@@ -1,8 +1,14 @@
 import { Routes } from '@angular/router';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 
 export const routes: Routes = [
-    // {
-    //     path: 'test',
-    //     component: SomeComponent
-    // }
+    {
+        path: '',
+        component: HomePageComponent
+    },
+    {
+        path: 'sign_in',
+        component: SignInPageComponent
+    }
 ];
