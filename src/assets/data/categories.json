@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Tools and DIY"
+    },
+    {
+        "id": 2,
+        "name": "Books and Magazines"
+    },
+    {
+        "id": 3,
+        "name": "Electronics"
+    },
+    {
+        "id": 4,
+        "name": "Home Appliances"
+    },
+    {
+        "id": 5,
+        "name": "Home and Gardening"
+    },
+    {
+        "id": 6,
+        "name": "Clothing, Shoes and Accessories"
+    },
+    {
+        "id": 7,
+        "name": "Entertainment"
+    },
+    {
+        "id": 8,
+        "name": "Vehicles"
+    },
+    {
+        "id": 9,
+        "name": "Furniture"
+    },
+    {
+        "id": 10,
+        "name": "Miscellaneous"
+    }
+]
