@@ -1,0 +1,13 @@
+[
+    {
+        "categoryId": 2,
+        "name": "Fahrenheit 451",
+        "description": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. It presents a future American society where books have been outlawed and \"firemen\" burn any that are found",
+        "price": 4500,
+        "stock": 32,
+        "images": [
+            "https://m.media-amazon.com/images/I/61l8LHt4MeL._AC_UF1000,1000_QL80_.jpg",
+            "https://cdn.waterstones.com/bookjackets/large/9780/0065/9780006546061.jpg"
+        ]
+    }
+]
