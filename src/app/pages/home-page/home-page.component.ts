@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-
+  constructor(private categoryService: CategoryService) {
+    this.categoryService.selectedCategory = undefined;
+  }
 }

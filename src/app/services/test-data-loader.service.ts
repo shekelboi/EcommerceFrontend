@@ -20,4 +20,8 @@ export class TestDataLoaderService {
   public getCategoryById(categoryId: number) {
     return this.categories.find(category => category.id == categoryId);
   }
+
+  public getProductsByCategory(category: Category | undefined) {
+    return products.filter(prod => prod.categoryId == category?.id);
+  }
 }

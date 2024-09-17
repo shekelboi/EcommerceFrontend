@@ -9,5 +9,15 @@
             "https://m.media-amazon.com/images/I/61l8LHt4MeL._AC_UF1000,1000_QL80_.jpg",
             "https://cdn.waterstones.com/bookjackets/large/9780/0065/9780006546061.jpg"
         ]
+    },
+    {
+        "categoryId": 2,
+        "name": "1984",
+        "description": "Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+        "price": 5200,
+        "stock": 12,
+        "images": [
+            "https://www.atlantiszkiado.hu/file/7e5de36e6570_198.jpg"
+        ]
     }
 ]
