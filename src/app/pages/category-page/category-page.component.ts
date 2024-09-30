@@ -7,22 +7,22 @@ import { Product } from '../../DTOs/Product';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-category-page',
-  standalone: true,
-  imports: [CardModule, NgFor, RouterLink],
-  templateUrl: './category-page.component.html',
-  styleUrl: './category-page.component.css'
+    selector: 'app-category-page',
+    standalone: true,
+    imports: [CardModule, NgFor, RouterLink],
+    templateUrl: './category-page.component.html',
+    styleUrl: './category-page.component.css'
 })
 export class CategoryPageComponent {
-  categoryId: number = -1;
-  productsInCategory: Product[] = [];
+    categoryId: number = -1;
+    productsInCategory: Product[] = [];
 
-  constructor(public testDataLoaderService: TestDataLoaderService, private route: ActivatedRoute, public categoryService: CategoryService) {
-    this.route.params.subscribe(params => {
-      this.categoryId = parseInt(params['category_id']);
-      this.categoryService.selectedCategory = this.testDataLoaderService.getCategoryById(this.categoryId);
-      this.productsInCategory = this.testDataLoaderService.getProductsByCategory(this.categoryService.selectedCategory);
-      console.log(this.productsInCategory, "products in category")
-    });
-  }
+    constructor(public testDataLoaderService: TestDataLoaderService, private route: ActivatedRoute, public categoryService: CategoryService) {
+        this.route.params.subscribe(params => {
+            this.categoryId = parseInt(params['category_id']);
+            this.categoryService.selectedCategory = this.testDataLoaderService.getCategoryById(this.categoryId);
+            this.productsInCategory = this.testDataLoaderService.getProductsByCategory(this.categoryService.selectedCategory);
+            console.log(this.productsInCategory, "products in category")
+        });
+    }
 }

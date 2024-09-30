@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Category } from '../DTOs/Category';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CategoryService {
-  selectedCategory: Category | undefined;
-  constructor() { }
+    selectedCategory: Category | undefined;
+    constructor() { }
 }

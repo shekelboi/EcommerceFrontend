@@ -9,22 +9,22 @@ import { CategoryService } from '../../../services/category.service';
 
 
 @Component({
-  selector: 'app-categories-dropdown',
-  standalone: true,
-  imports: [DropdownModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './categories-dropdown.component.html',
-  styleUrl: './categories-dropdown.component.css'
+    selector: 'app-categories-dropdown',
+    standalone: true,
+    imports: [DropdownModule, FormsModule, ReactiveFormsModule],
+    templateUrl: './categories-dropdown.component.html',
+    styleUrl: './categories-dropdown.component.css'
 })
 export class CategoriesDropdownComponent {
-  categories: Category[];
-  selectedCategory: Category | undefined = undefined;
+    categories: Category[];
+    selectedCategory: Category | undefined = undefined;
 
-  constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
-    this.categories = this.testDataLoaderService.categories;
-    this.selectedCategory = this.categoryService.selectedCategory;
-  }
+    constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
+        this.categories = this.testDataLoaderService.categories;
+        this.selectedCategory = this.categoryService.selectedCategory;
+    }
 
-  public onCategoryChanged(category: Category) {
-    this.router.navigate(['/category', category.id])
-  }
+    public onCategoryChanged(category: Category) {
+        this.router.navigate(['/category', category.id])
+    }
 }

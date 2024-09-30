@@ -7,24 +7,24 @@ import { Product } from '../../DTOs/Product';
 import { Category } from '../../DTOs/Category';
 
 @Component({
-  selector: 'app-product-page',
-  standalone: true,
-  imports: [RouterLink, CarouselModule],
-  templateUrl: './product-page.component.html',
-  styleUrl: './product-page.component.css'
+    selector: 'app-product-page',
+    standalone: true,
+    imports: [RouterLink, CarouselModule],
+    templateUrl: './product-page.component.html',
+    styleUrl: './product-page.component.css'
 })
 export class ProductPageComponent {
-  productId: number = -1;
-  product: Product | undefined;
-  category: Category | undefined;
+    productId: number = -1;
+    product: Product | undefined;
+    category: Category | undefined;
 
-  constructor(public testDataLoaderService: TestDataLoaderService, private route: ActivatedRoute, public categoryService: CategoryService) {
-    this.route.params.subscribe(params => {
-      this.productId = parseInt(params['product_id']);
-      this.categoryService.selectedCategory = this.testDataLoaderService.getCategoryById(this.productId);
-      this.product = this.testDataLoaderService.getProductById(this.productId);
-      this.category = this.product != undefined ? this.testDataLoaderService.getCategoryById(this.product.categoryId) : undefined;
-      console.log(this.product, "product found")
-    });
-  }
+    constructor(public testDataLoaderService: TestDataLoaderService, private route: ActivatedRoute, public categoryService: CategoryService) {
+        this.route.params.subscribe(params => {
+            this.productId = parseInt(params['product_id']);
+            this.categoryService.selectedCategory = this.testDataLoaderService.getCategoryById(this.productId);
+            this.product = this.testDataLoaderService.getProductById(this.productId);
+            this.category = this.product != undefined ? this.testDataLoaderService.getCategoryById(this.product.categoryId) : undefined;
+            console.log(this.product, "product found")
+        });
+    }
 }

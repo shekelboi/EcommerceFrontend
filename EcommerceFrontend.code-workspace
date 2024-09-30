@@ -1,13 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		// Hide test files
-		"files.exclude": {
-			"**/*.spec.ts": true
-		}
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.indentSize": 4,
+        // Hide test files
+        "files.exclude": {
+            "**/*.spec.ts": true
+        }
+    }
 }
