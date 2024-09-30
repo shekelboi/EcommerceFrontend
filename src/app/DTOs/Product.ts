@@ -1,4 +1,5 @@
 export class Product {
+    id: number;
     categoryId: number;
     name: string;
     description: string;
@@ -7,6 +8,7 @@ export class Product {
     images: string[];
 
     constructor(
+        id: number,
         categoryId: number,
         name: string,
         description: string,
@@ -14,6 +16,7 @@ export class Product {
         stock: number,
         images: string[]
     ) {
+        this.id = id;
         this.categoryId = categoryId;
         this.name = name;
         this.description = description;

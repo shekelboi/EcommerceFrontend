@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TestDataLoaderService } from '../../services/test-data-loader.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
 import { CardModule } from 'primeng/card';
 import { Product } from '../../DTOs/Product';
@@ -10,7 +10,7 @@ import {CarouselModule} from 'primeng/carousel';
 @Component({
   selector: 'app-category-page',
   standalone: true,
-  imports: [CardModule, NgFor, CarouselModule],
+  imports: [CardModule, NgFor, CarouselModule, RouterLink],
   templateUrl: './category-page.component.html',
   styleUrl: './category-page.component.css'
 })

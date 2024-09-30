@@ -2,12 +2,12 @@
 
 <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem">
     <p-card *ngFor="let product of productsInCategory">
-        <p-carousel [value]="product.images">
-            <ng-template let-image pTemplate="item">
-                <img style="max-width: 10rem; max-height: 20rem; object-fit: cover;" [src]="image" alt="">
-            </ng-template>
-        </p-carousel>
-        <p><b>{{ product.name }}</b></p>
+        <a [routerLink]="'/product/' + product.id">
+                <div style="width: 100%; text-align: center;">
+                    <img style="max-height: 12rem; object-fit: cover" [src]="product.images[0]" alt="">
+                </div>
+            <p><b>{{ product.name }}</b></p>
+        </a>
         <p>{{ product.price }} HUF<br><span style="font-size: 0.75em;">{{ product.stock}} in stock</span></p>
     </p-card>
 </div>

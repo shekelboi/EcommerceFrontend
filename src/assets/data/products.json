@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "categoryId": 2,
         "name": "Fahrenheit 451",
         "description": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. It presents a future American society where books have been outlawed and \"firemen\" burn any that are found",
@@ -11,6 +12,7 @@
         ]
     },
     {
+        "id": 2,
         "categoryId": 2,
         "name": "1984",
         "description": "Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
@@ -18,6 +20,17 @@
         "stock": 12,
         "images": [
             "https://www.atlantiszkiado.hu/file/7e5de36e6570_198.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "categoryId": 2,
+        "name": "Oliver Twist",
+        "description": "Oliver Twist; or, The Parish Boy's Progress, is the second novel by English author Charles Dickens. It was originally published as a serial from 1837 to 1839 and as a three-volume book in 1838.",
+        "price": 1838,
+        "stock": 20,
+        "images": [
+            "https://m.media-amazon.com/images/I/81QGqaKWjXL._AC_UF1000,1000_QL80_.jpg"
         ]
     }
 ]
