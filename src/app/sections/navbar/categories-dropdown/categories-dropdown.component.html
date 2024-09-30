@@ -1,8 +1,3 @@
-<p-dropdown
-    #categoryDropdown
-    [options]="categories"
-    [(ngModel)]="this.categoryService.selectedCategory"
-    (onChange)="onCategoryChanged(categoryDropdown.value)"
-    optionLabel="name" 
-    placeholder="Select a category">
+<p-dropdown #categoryDropdown [options]="categories" [(ngModel)]="this.categoryService.selectedCategory"
+    (onChange)="onCategoryChanged(categoryDropdown.value)" optionLabel="name" placeholder="Select a category">
 </p-dropdown>

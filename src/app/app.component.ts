@@ -8,11 +8,11 @@ import { SearchbarComponent } from './sections/navbar/searchbar/searchbar.compon
 import { SignInComponent } from './sections/navbar/sign-in/sign-in.component';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    imports: [RouterOutlet, ButtonModule, RouterLink, NavbarComponent, CategoriesDropdownComponent, SearchbarComponent, SignInComponent, FooterComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, ButtonModule, RouterLink, NavbarComponent, CategoriesDropdownComponent, SearchbarComponent, SignInComponent, FooterComponent]
 })
 export class AppComponent {
   title = 'EcommerceFrontend';

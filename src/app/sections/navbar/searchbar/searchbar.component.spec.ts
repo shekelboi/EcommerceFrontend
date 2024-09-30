@@ -10,8 +10,8 @@ describe('SearchbarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SearchbarComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(SearchbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

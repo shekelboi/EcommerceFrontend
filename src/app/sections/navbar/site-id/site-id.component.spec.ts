@@ -10,8 +10,8 @@ describe('SiteIdComponent', () => {
     await TestBed.configureTestingModule({
       imports: [SiteIdComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(SiteIdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -10,8 +10,8 @@ describe('CategoryPageComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CategoryPageComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(CategoryPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

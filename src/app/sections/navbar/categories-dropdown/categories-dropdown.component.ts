@@ -19,11 +19,11 @@ export class CategoriesDropdownComponent {
   categories: Category[];
   selectedCategory: Category | undefined = undefined;
 
-  constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) { 
+  constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
     this.categories = this.testDataLoaderService.categories;
     this.selectedCategory = this.categoryService.selectedCategory;
   }
-  
+
   public onCategoryChanged(category: Category) {
     this.router.navigate(['/category', category.id])
   }

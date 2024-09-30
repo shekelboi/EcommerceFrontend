@@ -5,7 +5,7 @@ import { CategoryService } from '../../services/category.service';
 import { CardModule } from 'primeng/card';
 import { Product } from '../../DTOs/Product';
 import { NgFor } from '@angular/common';
-import {CarouselModule} from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-category-page',

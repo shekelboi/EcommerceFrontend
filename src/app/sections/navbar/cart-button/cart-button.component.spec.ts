@@ -10,8 +10,8 @@ describe('CartButtonComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CartButtonComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(CartButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -10,8 +10,8 @@ describe('CategoriesDropdownComponent', () => {
     await TestBed.configureTestingModule({
       imports: [CategoriesDropdownComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(CategoriesDropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
