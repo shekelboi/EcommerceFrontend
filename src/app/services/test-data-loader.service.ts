@@ -24,4 +24,8 @@ export class TestDataLoaderService {
   public getProductsByCategory(category: Category | undefined) {
     return products.filter(prod => prod.categoryId == category?.id);
   }
+
+  public getProductById(productId: number): Product | undefined {
+    return products.find(prod => prod.id == productId);
+  }
 }

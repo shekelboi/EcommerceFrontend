@@ -5,12 +5,11 @@ import { CategoryService } from '../../services/category.service';
 import { CardModule } from 'primeng/card';
 import { Product } from '../../DTOs/Product';
 import { NgFor } from '@angular/common';
-import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-category-page',
   standalone: true,
-  imports: [CardModule, NgFor, CarouselModule, RouterLink],
+  imports: [CardModule, NgFor, RouterLink],
   templateUrl: './category-page.component.html',
   styleUrl: './category-page.component.css'
 })
