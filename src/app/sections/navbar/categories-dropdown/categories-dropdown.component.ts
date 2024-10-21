@@ -16,11 +16,14 @@ import { CategoryService } from '../../../services/category.service';
     styleUrl: './categories-dropdown.component.css'
 })
 export class CategoriesDropdownComponent {
-    categories: Category[];
+    categories: Category[] | undefined;
     selectedCategory: Category | undefined = undefined;
 
     constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
-        this.categories = this.testDataLoaderService.categories;
+        this.categoryService.getCategories().subscribe(categories => {
+            this.categories = categories;
+        })
+        // this.categories = this.testDataLoaderService.categories;
         this.selectedCategory = this.categoryService.selectedCategory;
     }
 

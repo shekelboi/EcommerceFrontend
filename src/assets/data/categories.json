@@ -1,42 +1,52 @@
 [
     {
         "id": 1,
-        "name": "Tools and DIY"
+        "name": "Tools and DIY",
+        "logo": ""
     },
     {
         "id": 2,
-        "name": "Books and Magazines"
+        "name": "Books and Magazines",
+        "logo": ""
     },
     {
         "id": 3,
-        "name": "Electronics"
+        "name": "Electronics",
+        "logo": ""
     },
     {
         "id": 4,
-        "name": "Home Appliances"
+        "name": "Home Appliances",
+        "logo": ""
     },
     {
         "id": 5,
-        "name": "Home and Gardening"
+        "name": "Home and Gardening",
+        "logo": ""
     },
     {
         "id": 6,
-        "name": "Clothing, Shoes and Accessories"
+        "name": "Clothing, Shoes and Accessories",
+        "logo": ""
     },
     {
         "id": 7,
-        "name": "Entertainment"
+        "name": "Entertainment",
+        "logo": ""
     },
     {
         "id": 8,
-        "name": "Vehicles"
+        "name": "Vehicles",
+        "logo": ""
     },
     {
         "id": 9,
-        "name": "Furniture"
+        "name": "Furniture",
+        "logo": ""
     },
     {
         "id": 10,
-        "name": "Miscellaneous"
+        "name": "Miscellaneous",
+        "logo": ""
     }
 ]
