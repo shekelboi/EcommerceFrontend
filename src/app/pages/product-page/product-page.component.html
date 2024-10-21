@@ -1,11 +1,28 @@
-<a style="text-decoration: none;" [routerLink]="'/category/' + categoryService.selectedCategory?.id">
-    <h1> {{ categoryService.selectedCategory?.name }} </h1>
+<a style="text-decoration: none;" [routerLink]="'/category/' + category?.id">
+    <h3> {{ category?.name }} </h3>
 </a>
-<div style="width: 95%; height: 80%; background-color: hsl(0, 0, 50);">
-    hello
-    <!-- <p-carousel [value]="product.images">
-        <ng-template let-image pTemplate="item">
-            <img style="max-width: 10rem; max-height: 20rem; object-fit: cover;" [src]="image" alt="">
-        </ng-template>
-    </p-carousel> -->
+<div style="width: 80%; height: 80%; margin: auto; background-color: hsl(0, 0, 50);">
+    <div style="display: flex; justify-content: space-between;">
+        <div style="text-align: center;">
+            <h1> {{ product?.name }}</h1>
+            <p-carousel [value]="product == undefined ? [] : product.images">
+                <ng-template let-image pTemplate="item">
+                    <img style="max-width: 10rem; max-height: 20rem; object-fit: cover;" [src]="image" alt="">
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div>
+            <p>
+                Description:
+            </p>
+            <div style="width: 50rem; height: 20rem; border-radius: 3px; border: 1px solid black; padding: 5px">
+                <p>{{ product?.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <p>Price: <b>{{ product?.price }} HUF</b></p>
+    </div>
+
+
 </div>
