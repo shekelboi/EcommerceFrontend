@@ -23,7 +23,6 @@ export class CategoriesDropdownComponent {
         this.categoryService.getCategories().subscribe(categories => {
             this.categories = categories;
         })
-        // this.categories = this.testDataLoaderService.categories;
         this.selectedCategory = this.categoryService.selectedCategory;
     }
 

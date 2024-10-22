@@ -1,10 +1,16 @@
 <h1>{{ this.categoryService.selectedCategory?.name }}</h1>
 
+<h2>
+    <ng-container *ngIf="selectedCategory$ | async as selectedCategory">
+        Selected category: {{ selectedCategory.name }}
+    </ng-container>
+</h2>
+
 <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem">
     <p-card *ngFor="let product of productsInCategory">
         <a [routerLink]="'/product/' + product.id">
             <div style="width: 100%; text-align: center;">
-                <img style="max-height: 12rem; object-fit: cover" [src]="product.images[0]" alt="">
+                <img style="max-height: 12rem; object-fit: cover" [src]="product.images" alt="">
             </div>
             <p><b>{{ product.name }}</b></p>
         </a>
