@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TestDataLoaderService } from '../../../services/test-data-loader.service'
 import { Category } from '../../../DTOs/Category';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -19,7 +18,7 @@ export class CategoriesDropdownComponent {
     categories: Category[] | undefined;
     selectedCategory: Category | undefined = undefined;
 
-    constructor(public testDataLoaderService: TestDataLoaderService, private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
+    constructor(private router: Router, private route: ActivatedRoute, public categoryService: CategoryService) {
         this.categoryService.getCategories().subscribe(categories => {
             this.categories = categories;
         })

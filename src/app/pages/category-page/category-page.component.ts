@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TestDataLoaderService } from '../../services/test-data-loader.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
 import { CardModule } from 'primeng/card';
@@ -25,7 +24,7 @@ export class CategoryPageComponent {
     selectedCategory$: Observable<Category>;
     productsInCategory: Product[] = [];
 
-    constructor(public testDataLoaderService: TestDataLoaderService, private route: ActivatedRoute, public categoryService: CategoryService) {
+    constructor(private route: ActivatedRoute, public categoryService: CategoryService) {
         console.log('Constructor loaded');
         this.categoryId$ = this.route.paramMap.pipe(
             map(params => {
