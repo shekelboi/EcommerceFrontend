@@ -23,7 +23,11 @@ export const routes: Routes = [
         component: CategoryPageComponent
     },
     {
-        path: 'product/:product_id',
+        path: 'product/:slug/:public_id',
+        component: ProductPageComponent
+    },
+    {
+        path: 'product/:public_id',
         component: ProductPageComponent
     }
 ];

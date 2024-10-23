@@ -8,7 +8,7 @@
 
 <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem">
     <p-card *ngFor="let product of productsInCategory">
-        <a [routerLink]="'/product/' + product.id">
+        <a [routerLink]="'/product/' + product.slug + '/' + product.publicId">
             <div style="width: 100%; text-align: center;">
                 <img style="max-height: 12rem; object-fit: cover" [src]="product.images" alt="">
             </div>
