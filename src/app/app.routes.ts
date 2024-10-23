@@ -26,8 +26,4 @@ export const routes: Routes = [
         path: 'product/:slug/:public_id',
         component: ProductPageComponent
     },
-    {
-        path: 'product/:public_id',
-        component: ProductPageComponent
-    }
 ];

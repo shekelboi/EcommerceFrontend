@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService extends ApiClientService {
 
-    public getProductById(productId: number): Observable<Product> | undefined {
-        return this.http.get<Product>(`${this.BASE_URL}/product/${productId}/`);
+    public getProductById(publicId: string): Observable<Product> {
+        return this.http.get<Product>(`${this.BASE_URL}/product/${publicId}`);
     }
 }

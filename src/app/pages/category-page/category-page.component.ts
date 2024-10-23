@@ -18,8 +18,6 @@ import { error } from 'console';
     styleUrl: './category-page.component.css'
 })
 export class CategoryPageComponent {
-    // categoryId: number = -1;
-
     categoryId$: Observable<number>;
     selectedCategory$: Observable<Category>;
     productsInCategory: Product[] = [];

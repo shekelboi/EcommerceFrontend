@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { CategoryService } from '../../services/category.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CarouselModule } from 'primeng/carousel';
 import { Product } from '../../DTOs/Product';
+import { map, Observable, switchMap } from 'rxjs';
+import { ProductService } from '../../services/product.service';
+import { CategoryService } from '../../services/category.service';
 import { Category } from '../../DTOs/Category';
 
 @Component({
@@ -13,16 +15,20 @@ import { Category } from '../../DTOs/Category';
     styleUrl: './product-page.component.css'
 })
 export class ProductPageComponent {
-    productId: number = -1;
-    product: Product | undefined;
-    category: Category | undefined;
+    publicId$: Observable<string>;
+    product$: Observable<Product>;
+    selectedCategory: Category | undefined;
 
-    constructor(private route: ActivatedRoute, public categoryService: CategoryService) {
-        this.route.params.subscribe(params => {
-            this.productId = parseInt(params['product_id']);
-            // this.product = this.testDataLoaderService.getProductById(this.productId);
-            // this.category = this.product != undefined ? this.testDataLoaderService.getCategoryById(this.product.categoryId) : undefined;
-            console.log(this.product, "product found")
-        });
+    constructor(private route: ActivatedRoute, private categoryService: CategoryService, private productService: ProductService) {
+        this.selectedCategory = this.categoryService.selectedCategory;
+        this.publicId$ = this.route.paramMap.pipe(
+            map(params => params.get('public_id') || '-1')
+        );
+
+        this.product$ = this.publicId$.pipe(
+            switchMap(productId => this.productService.getProductById(productId))
+        );
+
+        this.publicId$.subscribe(console.log);
     }
 }
