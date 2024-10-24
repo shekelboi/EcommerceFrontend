@@ -9,11 +9,12 @@ import { map, mergeMap, Observable, of, switchMap, tap } from 'rxjs';
 import { Category } from '../../DTOs/Category';
 import { ThisReceiver } from '@angular/compiler';
 import { error } from 'console';
+import { ProductGridComponent } from "../../sections/product-grid/product-grid.component";
 
 @Component({
     selector: 'app-category-page',
     standalone: true,
-    imports: [CardModule, NgFor, NgIf, RouterLink, AsyncPipe],
+    imports: [CardModule, NgFor, NgIf, RouterLink, AsyncPipe, ProductGridComponent],
     templateUrl: './category-page.component.html',
     styleUrl: './category-page.component.css'
 })
