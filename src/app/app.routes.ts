@@ -4,6 +4,7 @@ import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { CategoryPageComponent } from './pages/category-page/category-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'product/:slug/:public_id',
         component: ProductPageComponent
+    },
+    {
+        path: 'search',
+        component: SearchPageComponent
     },
 ];

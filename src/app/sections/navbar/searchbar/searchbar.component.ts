@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -9,5 +10,13 @@ import { ButtonModule } from 'primeng/button';
     styleUrl: './searchbar.component.css'
 })
 export class SearchbarComponent {
+    constructor(private router: Router) { }
 
+    searchSubmit(keyword: string) {
+        this.router.navigate(['/search'], {
+            queryParams: {
+                q: keyword
+            }
+        })
+    }
 }

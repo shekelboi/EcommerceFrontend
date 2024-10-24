@@ -1,6 +1,6 @@
 <div class="search-bar">
-    <input type="text" pInputText />
-    <p-button>
+    <input #keywordInput (keyup.enter)="searchSubmit(keywordInput.value)" type="text" pInputText />
+    <p-button (onClick)="searchSubmit(keywordInput.value)">
         <img class="search-icon" src="../../assets/images/search.svg">
     </p-button>
 </div>
