@@ -9,7 +9,7 @@ import { HttpParams } from '@angular/common/http';
 })
 export class ProductService extends ApiClientService {
     public getProductById(publicId: string): Observable<Product> {
-        return this.http.get<Product>(`${this.BASE_URL}/products/${publicId}`);
+        return this.http.get<Product>(`${this.BASE_URL}/product/${publicId}`);
     }
     public getProducts(): Observable<Product[]> {
         return this.http.get<Product[]>(`${this.BASE_URL}/products`);
