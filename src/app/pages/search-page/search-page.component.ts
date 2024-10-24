@@ -1,5 +1,5 @@
 import { AsyncPipe, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, switchMap } from 'rxjs';
 import { Product } from '../../DTOs/Product';
@@ -13,7 +13,7 @@ import { ProductService } from '../../services/product.service';
     templateUrl: './search-page.component.html',
     styleUrl: './search-page.component.css'
 })
-export class SearchPageComponent {
+export class SearchPageComponent implements OnDestroy {
     keyword$: Observable<string>;
     products$: Observable<Product[]>;
     products: Product[] = [];
@@ -33,5 +33,9 @@ export class SearchPageComponent {
         this.products$.subscribe(products => {
             this.products = products;
         });
+    }
+
+    ngOnDestroy(): void {
+        // TODO: reset search once this page is destroyed
     }
 }
