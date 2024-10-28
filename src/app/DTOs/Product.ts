@@ -1,4 +1,5 @@
 import { Category } from "./Category";
+import { Image } from "./Image";
 
 export class Product {
     id: number;
@@ -9,7 +10,7 @@ export class Product {
     slug: string;
     price: number;
     stock: number;
-    images: string[];
+    images: Image[];
     category: Category;
 
     constructor(
@@ -21,7 +22,7 @@ export class Product {
         slug: string,
         price: number,
         stock: number,
-        images: string[],
+        images: Image[],
         category: Category
     ) {
         this.id = id;
