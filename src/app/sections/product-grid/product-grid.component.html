@@ -1,13 +1,19 @@
 <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem">
-    <p-card *ngFor="let product of products">
+    <style>
+        .card {
+            width: 20rem
+        }
+    </style>
+    <p-card class="card" *ngFor="let product of products">
         <a [routerLink]="'/product/' + product.slug + '/' + product.publicId">
             <div style="width: 100%; text-align: center;">
-                <img style="max-height: 12rem; object-fit: cover"
+                <img style="height: 12rem; max-width: 100%; object-fit: contain; margin: auto"
                     [src]="product.images.length > 0 ? imageService.getImageUrl(product.images[0].publicId) : ''"
                     alt="">
             </div>
-            <p><b>{{ product.name }}</b></p>
+            <p style="min-height: 4rem;"><b>{{ product.name }}</b></p>
         </a>
-        <p>{{ product.price }} HUF<br><span style="font-size: 0.75em;">{{ product.stock }} in stock</span></p>
+        <p>{{ product.price }} HUF<br><span style="font-size: 0.75em;">{{ product.stock }} in
+                stock</span></p>
     </p-card>
 </div>
