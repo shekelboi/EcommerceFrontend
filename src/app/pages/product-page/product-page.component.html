@@ -4,9 +4,10 @@
 <div *ngIf="(product$ | async) as product"
     style="width: 80%; height: 80%; margin: auto; background-color: hsl(0, 0, 50);">
     <div style="display: flex; justify-content: space-between;">
-        <div style="text-align: center;">
+        <div style="text-align: center; height: 20rem;">
             <h1> {{ product?.name }}</h1>
-            <p-carousel [value]="product == undefined ? [] : product.images">
+            <p-carousel
+                [value]="product?.images != undefined && product.images.length == 0 ? [this.imageService.BLANK_IMAGE] : product.images">
                 <ng-template let-image pTemplate="item">
                     <img style="max-width: 10rem; max-height: 20rem; object-fit: cover;"
                         [src]="this.imageService.getImageUrl(image.publicId)" alt="">
