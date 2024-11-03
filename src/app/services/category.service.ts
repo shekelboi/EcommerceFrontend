@@ -11,14 +11,14 @@ export class CategoryService extends ApiClientService {
     selectedCategory: Category | undefined;
 
     public getCategoryById(categoryId: number) {
-        return this.http.get<Category>(`${this.BASE_URL}/category/${categoryId}`);
+        return this.http.get<Category>(`${this.BASE_URL}/public/category/${categoryId}`);
     }
 
     public getProductsByCategory(category: Category | undefined) {
-        return this.http.get<Product[]>(`${this.BASE_URL}/category/${category?.id}/products`);
+        return this.http.get<Product[]>(`${this.BASE_URL}/public/category/${category?.id}/products`);
     }
 
     public getCategories() {
-        return this.http.get<Category[]>(`${this.BASE_URL}/categories`)
+        return this.http.get<Category[]>(`${this.BASE_URL}/public/categories`)
     }
 }
