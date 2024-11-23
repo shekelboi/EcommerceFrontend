@@ -1,1 +1,8 @@
-<p>sign-in-page works!</p>
+<div id="sign-in-container">
+    <h1>Login</h1>
+    <div class="login-details">
+        <input #email type="text" pInputText placeholder="name@domain.com" />
+        <input #password type="text" pInputText placeholder="password" />
+    </div>
+    <p-button label="Login" (onClick)="login(email.value, password.value)" />
+</div>

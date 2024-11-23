@@ -1,8 +1,7 @@
 <a *ngIf="selectedCategory" style="text-decoration: none;" [routerLink]="'/category/' + selectedCategory.id">
     <h3> {{ selectedCategory.name }} </h3>
 </a>
-<div *ngIf="(product$ | async) as product"
-    style="width: 80%; height: 80%; margin: auto; background-color: hsl(0, 0, 50);">
+<div *ngIf="(product$ | async) as product" style="width: 80%; margin: auto; background-color: hsl(0, 0, 50);">
     <div style="display: flex; justify-content: space-between;">
         <div style="text-align: center; height: 20rem;">
             <h1> {{ product?.name }}</h1>
